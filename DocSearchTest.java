@@ -25,7 +25,6 @@ public class DocSearchTest {
     public void testHandleRequestSearch() throws IOException, URISyntaxException {
         Handler plos = new Handler("technical/plos"); 
         URI search = new URI(null, null, "/search", "q=base pair", null);
-        System.out.println(plos.handleRequest(search));
         assertEquals("There were 2 files found:\n[technical\\plos\\journal.pbio.0020190.txt, technical\\plos\\journal.pbio.0020223.txt]",
                         plos.handleRequest(search));
     }
